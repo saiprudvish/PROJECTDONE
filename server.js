@@ -53,6 +53,16 @@ app.use("/user", userApi)
 app.use("/admin", adminApi)
 app.use("/product",productApi)
 //invalid path
+
+
+app.get('*',(req,res) =>{
+    res.sendFile(path.join(__dirname,'dist/Angular/index.html'), function(err){
+        if(err){
+            res.status(500).send(err)
+        }
+    })
+})
+
 app.use((req, res, next) => {
 
     res.send({ message: `path ${req.url} is invalid` })
