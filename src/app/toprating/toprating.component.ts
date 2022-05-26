@@ -21,7 +21,7 @@ export class TopratingComponent implements OnInit {
       this.fs.getTopMovieRatingById(id).subscribe(
         obj=>{
     
-          this.topObj=obj;
+          this.topObj=obj.message;
         },
         err=>{
           console.log("err in reading movie",err)

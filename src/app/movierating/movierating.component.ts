@@ -29,7 +29,7 @@ export class MovieratingComponent implements OnInit {
       this.fs.getMovieRatingById(id).subscribe(
         obj=>{
     
-          this.MovieObj=obj;
+          this.MovieObj=obj.message;
           console.log("obj is ",this.MovieObj)
         },
         err=>{

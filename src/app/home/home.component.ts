@@ -23,21 +23,22 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.as.getProducts().subscribe(
-      res=>{
-        this.products=res.message;
-      },
-      err=>{
-        console.log("err in reading products ",err)
-        console.log("Something went wrong in reading products")
-      }
-    )
+    // this.fs.getTrendMovies().subscribe(
+    //   res=>{
+    //     this.products=res.message;
+    //     //console.log(this.products)
+    //   },
+    //   err=>{
+    //     console.log("err in reading products ",err)
+    //     console.log("Something went wrong in reading products")
+    //   }
+    // )
    
     this.mySubscription= this.fs.getTrendMovies().subscribe(
       userData=>{
         //assign movies
-        this.Trendmovies=userData;
-        console.log(this.Trendmovies)
+        this.products=userData.message;
+        //console.log(this.Trendmovies)
 
        
       },

@@ -24,7 +24,7 @@ export class RatingnetflixComponent implements OnInit {
     this.fs.getNetflixMovieRatingById(id).subscribe(
       obj=>{
   
-        this.NetflixObj=obj;
+        this.NetflixObj=obj.message;
       },
       err=>{
         console.log("err in reading movie",err)

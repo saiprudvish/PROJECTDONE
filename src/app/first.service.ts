@@ -9,46 +9,46 @@ export class FirstService {
 
   constructor(private  hc:HttpClient) { }
   getTrendMovies():Observable<any>{
-    return this.hc.get<any>('http://localhost:3000/trendingmovies')
+    return this.hc.get<any>('/product/getproducts')
   }
   getMovieRatingById(id):Observable<any>{
-    return this.hc.get<any>('http://localhost:3000/trendingmovies/'+id)
+    return this.hc.get<any>('product/getproducts/'+id)
  }
  getHotstarMovies():Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/hotstar/')
+  return this.hc.get<any>('/product/getproducts')
 }
-getHotstarMovieRatingById(id):Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/hotstar/'+id)
+getHotstarMovieRatingById(id:any):Observable<any>{
+  return this.hc.get<any>('product/getproducts/'+id)
 }
 getNetflixMovies():Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/netflix/')
+  return this.hc.get<any>('/product/getproducts')
 }
 getAhaMovieRatingById(id):Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/aha/'+id)
+  return this.hc.get<any>('product/getproducts/'+id)
 }
 getPrimeMovieRatingById(id):Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/amazonprime/'+id)
+  return this.hc.get<any>('product/getproducts/'+id)
 }
 getNetflixMovieRatingById(id):Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/netflix/'+id)
+  return this.hc.get<any>('product/getproducts/'+id)
 }
 getPrimeMovies():Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/amazonprime/')
+  return this.hc.get<any>('/product/getproducts')
 }
 getAhaMovies():Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/aha/')
+  return this.hc.get<any>('/product/getproducts')
 }
 getTopShows():Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/topshows/')
+  return this.hc.get<any>('/product/getproducts')
 }
 getShowsMovieRatingById(id):Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/topshows/'+id)
+  return this.hc.get<any>('product/getproducts/'+id)
 }
 getTopMovies():Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/topmovies/')
+  return this.hc.get<any>('/product/getproducts')
 }
 getTopMovieRatingById(id):Observable<any>{
-  return this.hc.get<any>('http://localhost:3000/topmovies/'+id)
+  return this.hc.get<any>('product/getproducts/'+id)
 }
 //  //to check login status
 //  userLoginStatus():boolean{

@@ -15,7 +15,7 @@ export class TopmoviesComponent implements OnInit {
     this.tObj.getTopMovies().subscribe(
       userData=>{
         //assign movies
-        this.TopMovies=userData;
+        this.TopMovies=userData.message;
 
        
       },

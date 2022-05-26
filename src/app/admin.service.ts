@@ -9,19 +9,5 @@ export class AdminService {
 
   constructor(private hc:HttpClient) { }
 
-    //to add new product
-    addNewProduct(newProduct):Observable<any>{
-
-      console.log("new product",newProduct)
-      return  this.hc.post("/product/add-product",newProduct)
-      
-    }
-
-      //to read all products
-  getProducts():Observable<any>{
-
-    return this.hc.get('/product/getproducts')
-  
- 
-}
+   
 }

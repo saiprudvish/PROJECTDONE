@@ -4,7 +4,7 @@ const app = exp();
 const path = require("path")
 
 //connect angular app with express server
-app.use(exp.static(path.join(__dirname, './dist/angular/')))
+app.use(exp.static(path.join(__dirname, './dist/Angular/')))
 
 //import APIS
 const userApi = require("./APIS/user-api")

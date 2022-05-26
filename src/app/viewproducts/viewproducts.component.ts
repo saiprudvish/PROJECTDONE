@@ -12,15 +12,15 @@ export class ViewproductsComponent implements OnInit {
   constructor(private adminService:AdminService) { }
 
   ngOnInit(): void {
-    this.adminService.getProducts().subscribe(
-      res=>{
-        this.products=res.message;
-      },
-      err=>{
-        console.log("err in reading products ",err)
-        console.log("Something went wrong in reading products")
-      }
-    )
+    //this.adminService.getProducts().subscribe(
+     // res=>{
+    //     this.products=res.message;
+    //   },
+    //   err=>{
+    //     console.log("err in reading products ",err)
+    //     console.log("Something went wrong in reading products")
+    //   }
+    // )
   }
 
 }

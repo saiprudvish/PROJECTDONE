@@ -15,7 +15,7 @@ export class PrimeComponent implements OnInit {
     this.pObj.getNetflixMovies().subscribe(
       userData=>{
         //assign movies
-        this.primeMovies=userData;
+        this.primeMovies=userData.message;
 
        
       },

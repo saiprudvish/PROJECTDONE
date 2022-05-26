@@ -16,7 +16,7 @@ export class AhaComponent implements OnInit {
     this.aObj.getNetflixMovies().subscribe(
       userData=>{
         //assign movies
-        this.ahaMovies=userData;
+        this.ahaMovies=userData.message;
 
        
       },

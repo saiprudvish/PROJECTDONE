@@ -23,7 +23,7 @@ export class RatingprimeComponent implements OnInit {
       this.fs.getPrimeMovieRatingById(id).subscribe(
         obj=>{
     
-          this.primeObj=obj;
+          this.primeObj=obj.message;
         },
         err=>{
           console.log("err in reading movie",err)

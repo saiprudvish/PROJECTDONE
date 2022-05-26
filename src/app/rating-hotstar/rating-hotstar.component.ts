@@ -23,7 +23,7 @@ export class RatingHotstarComponent implements OnInit {
     this.fs.getHotstarMovieRatingById(id).subscribe(
       obj=>{
   
-        this.HotstarObj=obj;
+        this.HotstarObj=obj.message;
       },
       err=>{
         console.log("err in reading movie",err)

@@ -24,7 +24,7 @@ export class RatingahaComponent implements OnInit {
       this.fs.getAhaMovieRatingById(id).subscribe(
         obj=>{
     
-          this.ahaObj=obj;
+          this.ahaObj=obj.message;
         },
         err=>{
           console.log("err in reading movie",err)

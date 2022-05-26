@@ -15,7 +15,7 @@ export class HotstarComponent implements OnInit {
     this.hObj.getHotstarMovies().subscribe(
       userData=>{
         //assign movies
-        this.HotstarMovies=userData;
+        this.HotstarMovies=userData.message;
 
        
       },

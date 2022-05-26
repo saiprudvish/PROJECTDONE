@@ -26,29 +26,29 @@ export class AddProductComponent implements OnInit {
 
   onAddProduct(prodObj){
 
-    console.log("prodobj",prodObj)
-    //create FOrmData obj
-    let formData=new FormData();
-    //add file
-    formData.append("photo",this.file,this.file.name)
-    //add userObj
-    formData.append("prodObj",JSON.stringify(prodObj))
+    // console.log("prodobj",prodObj)
+    // //create FOrmData obj
+    // let formData=new FormData();
+    // //add file
+    // formData.append("photo",this.file,this.file.name)
+    // //add userObj
+    // formData.append("prodObj",JSON.stringify(prodObj))
 
-    this.adminService.addNewProduct(formData).subscribe(
-      res=>{
-          if(res.message=='New product added'){
-            alert("New product added")
-            //navigate to view products 
-          }
-          else{
-            alert(res.message)
-          }
-      },
-      err=>{
-        console.log("err in adding proooooduct",err)
-        alert("Something went wrong in adding product")
-      }
-    )
+    // this.adminService.addNewProduct(formData).subscribe(
+    //   res=>{
+    //       if(res.message=='New product added'){
+    //         alert("New product added")
+    //         //navigate to view products 
+    //       }
+    //       else{
+    //         alert(res.message)
+    //       }
+    //   },
+    //   err=>{
+    //     console.log("err in adding proooooduct",err)
+    //     alert("Something went wrong in adding product")
+    //   }
+    //)
    
   }
 

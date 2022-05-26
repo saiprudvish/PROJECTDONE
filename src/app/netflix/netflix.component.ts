@@ -16,7 +16,7 @@ export class NetflixComponent implements OnInit {
     this.nObj.getNetflixMovies().subscribe(
       userData=>{
         //assign movies
-        this.NetflixMovies=userData;
+        this.NetflixMovies=userData.message;
 
        
       },

@@ -6,6 +6,32 @@ const multerObj = require("./middlewares/multerCloudinary")
 
 //adding new product
 
+productApi.get("/getproducts/:id", expressErrorHandler(async (req, res, next) => {
+
+    let productCollectionObject = req.app.get("productCollectionObject")
+
+    let un = req.params.id;
+    console.log(un)
+
+    let products = await productCollectionObject.find().toArray()
+    // let first=userProdObj[Object.keys(userProdObj)[0]]
+  console.log(products)
+    for (let key in products){
+        let obj = products[key];
+         //console.log(obj)
+        if(obj.id==un){
+           // console.log(obj)
+            res.send({ message: obj })
+        }
+    }
+    
+      
+  
+    
+
+}))
+
+
 productApi.post('/add-product', multerObj.single('photo'), expressErrorHandler(async (req, res, next) => {
 
 
@@ -38,7 +64,7 @@ productApi.get("/getproducts", expressErrorHandler(async (req, res, next) => {
     let productCollectionObject = req.app.get("productCollectionObject")
 
     let products = await productCollectionObject.find().toArray()
-
+      console.log(products)
     res.send({ message: products })
 
 }))
