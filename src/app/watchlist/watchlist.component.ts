@@ -33,7 +33,7 @@ export class WatchlistComponent implements OnInit {
           alert("User watchlist is empty")
         }
         else{
-            this.userCartObj=res["message"]
+            this.userCartObj=res.message
           
             
           

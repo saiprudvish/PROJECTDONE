@@ -1,4 +1,4 @@
-<div class=" mt-5 col-lg-12 col-md-12 col-sm-10 col-xs-3 ">
+<div class=" mt-5 col-lg-12 col-md-12 col-sm-5 col-xs-3 ">
     <a  (click)='onSelectNetflix()' class="ms-5"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/185px-Netflix_2015_N_logo.svg.png"   class="ms-5 ott mt-3" alt="" width="100px" height="100px">
      </a>
 
@@ -30,7 +30,7 @@
     <!-- <div *ngFor="let name of productsSentByChild">{{name}}</div> -->
 
     <input type="text" name="name" placeholder="Search by movie" class="form-control mt-2 w-50" [(ngModel)]="searchTerm" >
-<div class=" row row-cols-2 row-cols-sm-3 row-cols-md-4  row-cols-lg-6 g-4 mt-5 mb-5">
+<div class=" row row-cols-3 row-cols-sm-4 row-cols-md-6  row-cols-lg-8 g-4 mt-5 mb-5">
  <div class="col" *ngFor="let trendObj of products | search:searchTerm" >
      <app-productdetails [productObj]=trendObj   (myEvent)="getProductDetailsFromChild($event)" ></app-productdetails>
  </div>
@@ -58,7 +58,7 @@ Trending TV Shows
 
 <div class="responsive">
     <input type="text" name="name" placeholder="Search by movie" class="form-control mt-2 w-50" [(ngModel)]="searchTerm" >
-<div class=" row row-cols-2 row-cols-sm-3 row-cols-md-4  row-cols-lg-6 g-4 mt-5 mb-5">
+<div class=" row row-cols-3 row-cols-sm-4 row-cols-md-6  row-cols-lg-8  g-4 mt-5 mb-5">
 <div class="col" *ngFor="let trendObj of products| search:searchTerm">
    <app-productdetails [productObj]=trendObj></app-productdetails>
 </div>
